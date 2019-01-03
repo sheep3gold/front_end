@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #empForm input.error {
+            border: solid 1px green;
+        }
+
+        #empForm label.error {
+            margin-left: 10px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<p>员工信息录入</p>
+<form name="empForm" id="empForm" action="#" method="get">
+    <table border=1>
+        <tr>
+            <td>真实姓名(不能为空 ,没有其他要求)</td>
+            <td><input type="text" id="realname" name="realname" />
+            </td>
+        </tr>
+        <tr>
+            <td>登录名(不能为空,长度在5-8之间,可以包含中文字符(一个汉字算一个字符))</td>
+            <td><input type="text" id="username" name="username" /></td>
+        </tr>
+        <tr>
+            <td>密码(不能为空,长度6-12字符或数字,不能包含中文字符)</td>
+            <td><input type="password" id="password" name="password" /></td>
+        </tr>
+        <tr>
+            <td>重复密码</td>
+            <td><input type="password" id="repassword" name="repassword" /></td>
+        </tr>
+        <tr>
+            <td>性别(必选其一)</td>
+            <td>
+                <input type="radio" id="male" value="male" name="gender" />&nbsp;男&nbsp;&nbsp;
+                <input type="radio" id="female" value="female" name="gender" />&nbsp;女
+                <label class="error"  style="display: none;"></label>
+            </td>
+        </tr>
+        <tr>
+            <td>年龄(必填26-50)</td>
+            <td><input type="text" id="age" name="age" /></td>
+        </tr>
+        <tr>
+            <td>你的学历</td>
+            <td>
+                <select name="education" id="education">
+                    <option value="">--请选择你的学历--</option>
+                    <option value="zk">专科</option>
+                    <option value="bk">本科</option>
+                    <option value="yjs">研究生</option>
+                    <option value="ss">硕士</option>
+                    <option value="bs">博士</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>出生日期(1982/09/21)</td>
+            <td><input type="text" id="birthday" name="birthday" value="" /></td>
+        </tr>
+        <tr>
+            <td>兴趣爱好</td>
+            <td colspan="2">
+                <input type="checkbox" name="hobby" value="sing"  />&nbsp;唱歌 &nbsp;
+                <input type="checkbox" name="hobby" value="dance" />&nbsp;跳舞 &nbsp;
+                <input type="checkbox" name="hobby" value="coding" />&nbsp;编码 &nbsp;
+                <input type="checkbox" name="hobby" value="shoping" />&nbsp;购物 &nbsp;
+                <label class="error" style="display: none;"></label>
+            </td>
+        </tr>
+        <tr>
+            <td align="left">电子邮箱</td>
+            <td><input type="text" id="email" name="email" /></td>
+        </tr>
+        <tr>
+            <td align="left">身份证(15-18)</td>
+            <td><input type="text" id="card" name="card" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="保存"></td>
+        </tr>
+    </table>
+</form>
+<!--引入JQ库-->
+<script src="../js/jquery-3.3.1.min.js"></script>
+<!--引入validate库-->
+<script src="../js/jquery.validate.js"></script>
+<script src="validateTest.js"></script>
+
+</body>
+</html>

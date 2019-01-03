@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            margin: auto;
+            height: 200px;
+            width: 300px;
+            border: 1px solid gray;
+            padding: 0px;
+            border-radius: 5px;
+            background-image: url("../../img2/bg1.jpg");
+        }
+        td{
+            text-align: center;
+            font-size: 14px;
+        }
+        #user,#pwd{
+            width: 150px;
+            height: 32px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+
+        th{
+            font-size: 18px;
+        }
+        #user{
+            background-image: url("../../img2/head.png");
+            background-repeat: no-repeat;
+            padding-left: 35px;
+        }
+        #pwd {
+            background-image: url("../../img2/keyboard.png");
+            background-repeat: no-repeat;
+            padding-left: 35px;
+        }
+        #user:hover,#pwd:hover{
+            border: 1px dashed orange;
+        }
+        #user:focus,#pwd:focus{
+            background-color: lightyellow;
+        }
+
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <th colspan="2" align="center">
+            用户登陆
+        </th>
+    </tr>
+    <tr>
+        <td align="center">用户名：</td>
+        <td>
+            <input type="text" name="username" id="user">
+        </td>
+    </tr>
+    <tr>
+        <td align="center">密码：</td>
+        <td>
+            <input type="password" name="pwd" id="pwd">
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <input type="image" src="../../img2/regbtn.jpg">
+        </td>
+    </tr>
+</table>
+</body>
+</html>

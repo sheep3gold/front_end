@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function () {
+                var numInput = document.getElementById("num");
+                numInput.onchange = function () {
+                    //2.商品件数
+                    var num = numInput.value;
+                    var price = document.getElementById("proPrice").value;
+                    var totalPrice = price * num;
+                    document.getElementById("totalPrice").value = totalPrice;
+
+                };
+			}
+		</script>
+	</head>
+
+	<body>
+		<form action="" method="get">
+			<input value="10" id="proPrice">*商品件数:
+			<input type="text" id="num">=商品总价:
+			<input type="text" id="totalPrice"><br>
+			<input type="submit" value="提交订单">
+		</form>
+	</body>
+
+</html>

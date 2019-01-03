@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+            window.onload = function () {
+                document.getElementById("btn1").onclick = function () {
+                    alert(document.getElementById("myDiv").hasChildNodes());
+                };
+				document.getElementById("btn2").onclick=function () {
+                    document.getElementById("myDiv").removeChild(
+                        document.getElementById("mySpan")
+                    );
+                }
+                document.getElementById("btn3").onclick=function () {
+                    var span = document.createElement("span");
+                    span.innerHTML = "班长";
+                    span.setAttribute("id", "mySpan");
+                    if (!document.getElementById("mySpan")) {
+                        document.getElementById("myDiv").appendChild(span);
+					}
+                    // document.getElementById("myDiv").appendChild(span);
+                }
+            };
+		</script>
+	</head>
+	<body>
+		<h2>dom对象创建和删除标签</h2>
+		<hr />
+		<!--
+			操作按钮
+		-->
+		<h3>操作按钮</h3>
+		<button id="btn1">单击btn1，判断myDiv是否有子标签</button>
+		<button id="btn2">单击btn2，删除id="mySpan"的标签</button>
+		<button id="btn3">单击btn3，创建id="mySpan"的标签</button>
+
+		
+		
+		<div id="myDiv">
+			传智<span id="mySpan">播客</span>
+		</div>
+	</body>
+</html>

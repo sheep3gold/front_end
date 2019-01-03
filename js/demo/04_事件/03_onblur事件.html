@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+            window.onload = function () {
+                var userName = document.getElementById("userName");
+                userName.onblur = function () {
+                    var val = userName.value;
+					if (val==""){
+					    alert("请输入用户名...")
+					}
+                };
+
+            };
+		</script>
+	</head>
+
+	<body>
+	<form action="">
+		用户名：<input type="text" name="userName" id="userName"><br>
+		商品单价：<input type="submit" value="提交订单">
+	</form>
+	</body>
+
+</html>

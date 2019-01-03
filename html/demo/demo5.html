@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+    设置边框的宽度  -- border  值 宽度  1px 2px
+      如果不设置  表格是没有边框的
+      cellpadding -- 设置内容与边框的距离!!!!
+      cellspacing -- 设置单元格之间的距离!!!!
+      bgcolor -- background color 背景颜色的缩写  -- 设置倍颜色!!!!
+      width -- 设置 高度
+      height -- 设置高度
+      align  -- 设置 文字的位置 left 居左显示 center  居中显示  right 居右显示
+                left 默认效果
+ -->
+    <!--<table border="1px" cellpadding="5px" cellspacing="5px" bgcolor="yellow"
+    width="400px" height="300px">
+        <tr align="left">
+            <td>编号</td>
+            <td>姓名</td>
+            <td>性别</td>
+            <td>年龄</td>
+        </tr>
+        <tr align="center">
+            <td align="left">呵呵</td>
+            <td colspan="2">呵呵</td>
+            <td>呵呵</td>
+            <td>呵呵</td>
+        </tr>
+        <tr align="right">
+            <th>呵呵</th>
+        </tr>
+        <caption>标题</caption>
+    </table>-->
+<!--需求1: 实现跨行，制作电话本
+设置一个表格4行2列：
+1）边框为：1
+2）单元格之间的距离（cellspacing）为：0
+3）单元格与内容之间的距离为：10
+4）表格宽度为：300
+5）合并姓名为张三的单元格-->
+    <!--<table border="1px" cellspacing="0" cellpadding="10" width="300px">
+        <tr>
+            <th>姓名</th>
+            <th>手机号</th>
+        </tr>
+        <tr>
+            <td rowspan="2">张三</td>
+            <td>13333333333</td>
+        </tr>
+        <tr>
+            <td>13333333334</td>
+        </tr>
+        <tr>
+            <td>李四</td>
+            <td>13333333335</td>
+        </tr>
+    </table>-->
+<!--需求2: 实现跨列，制作电话本
+设置一个表格3行3列：
+6）边框为：1
+7）表格之间的距离（cellspacing）为：0
+8）表格与内容之间的距离为：10
+9）表格宽度为：300
+10）合并内容为手机号的单元格-->
+    <table cellspacing="0" border="1px" cellpadding="10px" width="300px">
+        <caption>标题</caption>
+        <tr>
+            <th>姓名</th>
+            <th colspan="2" rowspan="2">手机号</th>
+        </tr>
+        <tr>
+            <td>张三</td>
+            <!--<td>13800000000</td>
+            <td>13800000001</td>-->
+        </tr>
+        <tr>
+            <td>李四</td>
+            <td>13900000000</td>
+            <td>13900000001</td>
+        </tr>
+    </table>
+</body>
+</html>

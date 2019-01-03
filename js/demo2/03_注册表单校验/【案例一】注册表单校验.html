@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script>	
+		/*
+		 * 1. 给表单添加提交事件；
+		 * 2. 对用户名和密码进行非空校验；
+		 * 3. 校验不通过：在对应输入框后面显示错误提示信息；
+		 * 4. 校验通过：在对应的输入框后面显示"√"；
+		 * 5. 所有校验均通过后表单成功提交；
+		 */
+        window.onload = function () {
+            var name = document.getElementById("username");
+            var pwd = document.getElementById("password");
+            var name_msg = document.getElementById("username_msg");
+            var pwd_msg = document.getElementById("password_msg");
+            document.getElementById("registForm").onsubmit = function () {
+                if (name.value && pwd.value) {
+                    return true;
+                }else {
+                    return false;
+				}
+            };
+            name.onblur = function () {
+                if (!name.value) {
+                    name_msg.innerHTML = "<font color='red'>请输入用户名！</font>";
+                }else {
+                    name_msg.innerHTML="<font color='green'>√</font>"
+				}
+            };
+            pwd.onblur = function () {
+                if (!pwd.value) {
+                    pwd_msg.innerHTML = "<font color='red'>请输入密码！</font>";
+                }else {
+                    pwd_msg.innerHTML="<font color='green'>√</font>"
+                }
+            };
+
+        };
+		
+	</script>
+	<body>
+		<h2 align="center">注册表单校验</h2>
+		<form action="#" method="get" id="registForm">
+			<table width="40%" height="60%"  align="center" bgcolor="#ffffff" align="center">
+				<tr>
+					<td colspan="3">会员注册USER REGISTER</td>
+				</tr>
+				<tr>
+					<td width="20%">用户名:</td>
+					<td width="40%"><input type="text" name="username" id="username"></td>
+					<td width="40%"><span id="username_msg"></span></td>
+				</tr>
+				<tr>
+					<td>密码:</td>
+					<td><input type="password" name="password" id="password"></td>
+					<td><span id="password_msg"></span></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<input type="submit" value="注册" />
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

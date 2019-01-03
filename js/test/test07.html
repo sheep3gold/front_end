@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        tr:hover {
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <table id="tb" cellpadding="2px" cellspacing="1px" border="1px solid black"
+        width="550px">
+        <tr>
+            <th>学号</th>
+            <th>姓名</th>
+            <th>操作</th>
+        </tr>
+        <tr bgcolor="yellow">
+            <td>1</td>
+            <td>heima</td>
+            <td><a href="#" onclick="del(this)">删除</a></td>
+        </tr>
+    </table>
+    学号：<input type="text" id="id" name="id">
+    姓名：<input type="text" id="name" name="name">
+    <button id="btn">添加一行数据</button>
+</body>
+<script>
+    // var trTags = document.getElementsByTagName("tr");
+    document.getElementById("btn").onclick=function () {
+        var idTag = document.getElementById("id");
+        var nameTag = document.getElementById("name");
+        if (idTag && nameTag) {
+            var tr = document.createElement("tr");
+            var td1 = document.createElement("td");
+            var td2 = document.createElement("td");
+            var td3 = document.createElement("td");
+            td1.innerText = idTag.value;
+            td2.innerText = nameTag.value;
+            td3.innerHTML="<a href='#' onclick='del(this)'>删除</a>";
+
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+            idTag.value = "";
+            nameTag.value = "";
+            tr.setAttribute("bgcolor", "yellow");
+            document.getElementById("tb").appendChild(tr);
+            // trTags.push(tr);
+        }
+    };
+    // for (var i = 0; i < trTags.length; i++) {
+    //     var trTag = trTags[i];
+    //     trTag.onmouseover=function () {
+    //         this.setAttribute("bgcolor", "red");
+    //     };
+    //     trTag.onmouseout=function () {
+    //         this.setAttribute("bgcolor", "yellow");
+    //     }
+    // }
+
+    function del(obj) {
+        obj.parentNode.parentNode.remove();
+    }
+    // var aTags = document.getElementsByTagName("a");
+    //
+    // for (var i = 0; i < aTags.length; i++) {
+    //     var aTag = aTags[i];
+    //     aTag.onclick=function () {
+    //         this.parentNode.parentNode.remove();
+    //     }
+    // }
+</script>
+</html>

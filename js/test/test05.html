@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload=function() {
+            document.getElementById("div1").onmouseover = function () {
+                document.getElementById("span1").removeAttribute("hidden");
+            };
+            document.getElementById("div1").onmouseout = function () {
+                document.getElementById("span1").setAttribute("hidden","");
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="div1">
+    <a href="#" style="text-decoration: none">百度 </a><br>
+    <span id="span1" hidden style="color: blue">百度一下你就知道</span>
+</div>
+</body>
+</html>

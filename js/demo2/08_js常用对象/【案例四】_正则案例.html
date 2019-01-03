@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<!--???????????????????????????????????????????-->
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script>
+		window.onload=function () {
+            var regPhone = /^1[356789]\d{9}$/;
+            var regEmail = /^[a-zA-Z0-9_-]{3,12}@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+            var phoneElement = document.getElementById("phone");
+            phoneElement.onchange=function () {
+                var phoneNum = phoneElement.value;
+                var flag = regPhone.test(phoneNum);
+                if (flag) {
+                    alert("手机号正确")
+				}else {
+                    alert("手机号不正确");
+				}
+            }
+            var mailElement = document.getElementById("email");
+            mailElement.onchange=function () {
+                var mailNum = mailElement.value;
+                var flag = regEmail.test(mailNum);
+                if (flag) {
+                    alert("邮箱正确")
+				}else {
+                    alert("邮箱不正确");
+				}
+            }
+        }
+	</script>
+	<body>
+		<form action="#" method="get" >
+			<table width="60%" height="60%"  align="center" bgcolor="#ffffff">
+				<tr>
+					<td colspan="3">会员注册USER REGISTER</td>
+				</tr>
+				<tr>
+					<td width="20%">用户名:</td>
+					<td width="40%"><input type="text" name="username" id="username"></td>
+					<td width="40%"><span id="username_msg"></span></td>
+				</tr>
+				<tr>
+					<td>密码:</td>
+					<td><input type="password" name="password" id="password"></td>
+					<td><span id="password_msg"></span></td>
+				</tr>
+				<tr>
+					<td>Email:</td>
+					<td><input type="text" name="email" id="email"></td>
+					<td><span id="email_msg"></span></td>
+				</tr>
+				<tr>
+					<td>手机号:</td>
+					<td><input type="text" name="phone" id="phone"></td>
+					<td><span id="phone_msg"></span></td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<input type="submit" value="注册" />
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

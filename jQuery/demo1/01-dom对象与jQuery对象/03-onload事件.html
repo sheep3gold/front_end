@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script src="../js/jquery-3.3.1.js"></script>
+<script>
+    window.onload=function () {
+        alert("js的onload事件1...");
+    };
+    window.onload=function () {
+        alert("js的onload事件2...");
+    };
+    $(document).ready(function () {
+        alert("jquery的onload事件1...")
+    });
+    jQuery(document).ready(function () {
+        alert("jquery的onload事件2...")
+    });
+    $(function () {
+        alert("jquery的onload事件的简写方式...")
+    })
+</script>
+</html>

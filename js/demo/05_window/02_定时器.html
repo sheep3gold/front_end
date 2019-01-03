@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+            var setId1 = setTimeout(function () {
+                alert("BOOM爆炸了......");
+            }, 2000);
+            var setId2 = setTimeout("doIt();",3000);
+
+            function doIt() {
+                alert("BOOM爆炸了.....")
+            }
+            clearTimeout(setId1);
+            clearTimeout(setId2);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

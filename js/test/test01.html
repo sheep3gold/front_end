@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var n1 = window.prompt("请输入第一个数：", "0");
+        var n2 = window.prompt("请输入第二个数：", "0");
+        var op = window.prompt("请输入运算符(+、-、*、/:", "+");
+        // alert(n1 + n2);
+        n1 = parseFloat(n1);
+        n2 = parseFloat(n2);
+        var result = 0;
+        switch (op) {
+            case '+':
+                result = n1 + n2;
+                document.write(n1 + op + n2 + "=" + result + "<br>");
+                break;
+            case '-':
+                result = n1 - n2;
+                document.write(n1 + op + n2 + "=" + result + "<br>");
+                break;
+            case '*':
+                result = n1 * n2;
+                document.write(n1 + op + n2 + "=" + result + "<br>");
+                break;
+            case '/':
+                result = n1 / n2;
+                document.write(n1 + op + n2 + "=" + result + "<br>");
+                break;
+            default:
+                alert("运算符输入错误");
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

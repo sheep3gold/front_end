@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        #form1 input.error {
+            border: solid 1px blue;
+        }
+
+        #form1 label.error {
+            margin-left: 10px;
+            color: green;
+        }
+    </style>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/jquery.validate.js"></script>
+    <script>
+        $(function () {
+            $("#form1").validate({
+                rules:{
+                    username:{
+                        required:true
+                    },
+                    password:{
+                        required:true,
+                        minlength:4,
+                        maxlength:6
+                    },
+                    gender:{
+                        required:true
+                    }
+                },
+                messages:{
+                    username:{
+                        required:"用户名必填"
+                    },
+                    password:{
+                        required:"密码不能为空",
+                        minlength:"密码的最小长度为4",
+                        maxlength:"密码的最大长度为6"
+                    },
+                    gender:{
+                        required:"性别不为空"
+                    }
+
+                }
+
+            })
+        })
+
+    </script>
+</head>
+<body style="margin: 50px;">
+<form id="form1" action="#" method="get">
+    <table>
+        <tr>
+            <td>用户名</td>
+            <td><input type="text" name="username" id="username" /></td>
+        </tr>
+        <tr>
+            <td>密码</td>
+            <td><input type="password" name="password" id="password" /></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="提交" /></td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="gender" value="male">男</td>
+            <td><input type="radio" name="gender" value="female">女</td>
+            <label style="display: none"></label>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

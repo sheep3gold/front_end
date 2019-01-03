@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {
+            var $opts = $("option");
+            /*
+            $opts.each(function (index, element) {
+                console.log(element.value);
+            });*/
+            $.each($opts, function (index, element) {
+                console.log(element.value);
+            });
+        })
+
+    </script>
+</head>
+<body>
+    <select name="city" id="city">
+        <option value="bj">北京</option>
+        <option value="bj">上海</option>
+        <option value="bj">广州</option>
+        <option value="bj">深圳</option>
+    </select>
+</body>
+</html>

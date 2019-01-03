@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--
+			【案例】直接在浏览器控制台演示
+			
+		-->
+		<button id="btn1">back</button>
+		<button id="btn2">forward</button>
+		<button id="btn3">go</button>
+	</body>
+	<script>
+		document.getElementById("btn1").onclick=function () {
+            window.history.back();
+        };
+        document.getElementById("btn2").onclick=function () {
+            history.forward();
+        };
+        document.getElementById("btn3").onclick=function () {
+            history.go(-1);
+        };
+	</script>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>用户注册</h3>
+<hr>
+<form action="#">
+    <table>
+        <tr>
+            <td>用户名:</td>
+            <td>
+                <input type="text" name="username">
+            </td>
+        </tr>
+        <tr>
+            <td>密码:</td>
+            <td>
+                <input type="password" name="pwd">
+            </td>
+        </tr>
+        <tr>
+            <td>性别:</td>
+            <td>
+                <input type="radio" name="gender" value="男" checked>男
+                <input type="radio" name="gender" value="女">女
+            </td>
+        </tr>
+        <tr>
+            <td>爱好:</td>
+            <td>
+                <input type="checkbox" name="hobby" value="游泳">游泳
+                <input type="checkbox" name="hobby" value="下棋">下棋
+                <input type="checkbox" name="hobby" value="旅游">旅游
+                <input type="checkbox" name="hobby" value="跳楼">跳楼
+            </td>
+        </tr>
+        <tr>
+            <td>学历:</td>
+            <td>
+                <select name="diploma" id="">
+                    <option value="">-请选择-</option>
+                    <option value="本科">本科</option>
+                    <option value="硕士">硕士</option>
+                    <option value="博士">博士</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>照片:</td>
+            <td><input type="file" name="photo"></td>
+        </tr>
+        <tr>
+            <td>个人简介:</td>
+            <td>
+                <textarea name="brief" cols="30" rows="5"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="submit" value="注册">
+                <input type="reset" value="清空">
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

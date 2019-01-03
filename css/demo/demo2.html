@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--<link rel="stylesheet" href="css/2.css">-->
+    <style>
+        @import "css/2.css";
+    </style>
+</head>
+<body>
+<div>
+<form action="www.baidu.com" method="get">
+    <table>
+        <tr>
+            <td align="right">用户名:</td>
+            <td><input type="text" name="username"></td>
+        </tr>
+        <tr>
+            <td align="right">密码:</td>
+            <td><input type="password" name="pwd"></td>
+        </tr>
+        <tr>
+            <td align="right">确认密码:</td>
+            <td><input type="password" name="pwd2"></td>
+        </tr>
+        <tr>
+            <td align="right">性别:</td>
+            <td>
+                <input type="radio" value="0" name="gender">
+                <input type="radio" value="1" name="gender">
+            </td>
+        </tr>
+        <tr>
+            <td align="right">头像:</td>
+            <td>
+                <input type="file" name="file">
+            </td>
+        </tr>
+        <tr>
+            <td align="right">爱好:</td>
+            <td>
+                <input type="checkbox" name="hobby" value="编程">编程
+                <input type="checkbox" name="hobby" value="把妹" checked>把妹
+                <input type="checkbox" name="hobby" value="装逼">装逼
+            </td>
+        </tr>
+        <tr>
+            <td align="right">所在城市:</td>
+            <td>
+                <select name="city">
+                    <option value="bj">北京</option>
+                    <option value="sh" selected>上海</option>
+                    <option value="gz">广州</option>
+                    <option value="sz">深圳</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">自我描述:</td>
+            <td><textarea name="desc" id="" cols="30" rows="10"></textarea></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="提交"><input type="reset" value="重置"></td>
+        </tr>
+    </table>
+</form>
+</div>
+</body>
+</html>

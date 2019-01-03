@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--
+【需求】
+1. 使用remove()方法删除素材中的select标签，并观察删除后的效果；
+2. 使用empty()方法清空素材中的select标签，并观察效果；
+-->
+<select name="city" id="city">
+    <option value="">---请选择城市---</option>
+    <option value="bj">北京</option>
+    <option value="sh">上海</option>
+    <option value="sz">深圳</option>
+    <option value="gz">广州</option>
+</select>
+</body>
+<script type="text/javascript" src="../js/jquery-3.3.1.js" ></script>
+<script>
+    // $("#city").remove();
+    $("#city").empty();
+</script>
+</html>

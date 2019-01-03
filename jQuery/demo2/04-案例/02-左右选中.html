@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {
+            //> 移动选中的第一个
+            //>>选中的移动
+            //>>>全部移动
+            $("#toRight1").click(function () {
+                $("#right").append($("#left option:selected:first"));
+            });
+            $("#toRight2").click(function () {
+                $("#right").append($("#left option:selected"));
+            });
+            $("#toRight3").click(function () {
+                $("#right").append($("#left option"));
+            });
+            $("#toLeft1").click(function () {
+                $("#left").append($("#right option:selected:first"));
+            });
+            $("#toLeft2").click(function () {
+                $("#left").append($("#right option:selected"));
+            });
+            $("#toLeft3").click(function () {
+                $("#left").append($("#right option"));
+            });
+        });
+    </script>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <select id="left" multiple="true" style="width:100px" size="10">
+                <option>環</option>
+                <option>芈</option>
+                <option>琅</option>
+                <option>琊</option>
+                <option>爨</option>
+                <option>甄</option>
+                <option>槑</option>
+                <option>夔</option>
+            </select>
+        </td>
+        <td>
+            <input type="button" value=">" id="toRight1"><br>
+            <input type="button" value=">>" id="toRight2"><br>
+            <input type="button" value=">>>" id="toRight3"><br><br>
+            <input type="button" value="<" id="toLeft1"><br>
+            <input type="button" value="<<" id="toLeft2"><br>
+            <input type="button" value="<<<" id="toLeft3">
+        </td>
+        <td>
+            <select id="right" multiple="multiple" style="width:100px" size="10">
+
+            </select>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

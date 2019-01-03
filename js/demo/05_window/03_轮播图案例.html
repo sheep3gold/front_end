@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+            var i = 1;
+            var v=setInterval("changeImgSrc();", 2000);
+
+            var changeImgSrc=function()  {
+                i++;
+                if (i > 3) {
+                    i = 1;
+                }
+                document.getElementById("img").src = "../img/" + i + ".jpg";
+            }
+
+            // clearInterval(v);
+            // eval("var x=10;var y=20;alert(x*y)");
+
+            // eval("var a='5';var b=parseInt(a);alert(b+10)");
+		</script>
+	</head>
+	<body>
+		<div >
+			<img width="100%" id="img" src="../img/1.jpg"/>
+		</div>
+	</body>
+</html>

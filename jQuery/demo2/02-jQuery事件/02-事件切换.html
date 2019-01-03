@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {
+            var count = 0;
+            $("#b1").hover(function () {
+                $("#b1").css("background-color", "red");
+            },
+            function () {
+                $("#b1").css("background-color", "blue");
+            });
+            $("#b2").click(function () {
+                count++;
+                if (count == 1) {
+                    alert(1);
+                }
+                if (count==2){
+                    alert(2);
+                }
+                if (count == 3) {
+                    alert(3);
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+<input type="button" value="鼠标移入背景色变成红色，鼠标移出背景色变成蓝色" id="b1"/>
+<input type="button" value="点击第一次，第二次，第三次分别弹出不同的信息" id="b2"/>
+</body>
+</html>

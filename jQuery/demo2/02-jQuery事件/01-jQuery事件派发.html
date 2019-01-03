@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {
+            $("#b2").click(function () {
+                alert("hello world jq");
+            });
+            document.getElementById("b1").onclick=function () {
+                alert("hello world js");
+            }
+        })
+
+    </script>
+</head>
+<body>
+    <input type="button" value="分别使用JS给我绑定点击事件，点击后弹出Hello World"  id="b1"/>
+    <input type="button" value="分别使用jQuery给我绑定点击事件，点击后弹出Hello World"  id="b2"/>
+</body>
+</html>

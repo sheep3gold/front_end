@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.3.1.js"></script>
+</head>
+<body>
+
+
+<ul>
+    <li id="bj" name="beijing">北京</li>
+    <li id="sh" name="shanghai">上海</li>
+    <li id="gz" name="guangzhou">北京</li>
+    <li id="sz" name="shengzhen">深圳</li>
+</ul>
+    <input type="checkbox" value="滑雪" id="hobby" checked>滑雪
+
+<script>
+    //分别使用attr()方法和prop()方法获取li的name属性值
+    console.log($("#bj").attr("name"));
+    console.log($("#bj").prop("name"));
+    //分别使用attr()方法和prop()方法给checkbox设置name属性
+    $("#hobby").attr("aaa", "aaa");
+    $("#hobby").prop("bbb", "bbb");
+    //分别使用attr()和prop()方法获取checkbox的checked属性
+    console.log($("#hobby").attr("checked"));
+    console.log($("#hobby").prop("checked"));
+    // $("#hobby").prop("checked", false);
+</script>
+</body>
+</html>

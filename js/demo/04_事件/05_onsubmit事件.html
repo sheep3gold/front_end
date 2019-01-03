@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--<form action="#" onsubmit="return checkForm();">
+    用户名：<input type="text" name="username" id="uName"><br>
+    密码：<input type="password" name="pwd" id="pwd"><br>
+    <input type="submit" value="注册">
+</form>-->
+
+<form action="#" id="registForm">
+    用户名：<input type="text" name="username" id="uName"><br>
+    密码：<input type="password" name="pwd" id="pwd"><br>
+    <input type="submit" value="注册">
+</form>
+</body>
+
+<script>
+    document.getElementById("registForm").onsubmit = function () {
+        // return true;
+        return false;
+    };
+    function checkForm() {
+        // return false;
+        return true;
+
+    }
+</script>
+
+</html>
